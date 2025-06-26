@@ -1,228 +1,217 @@
-# MCP Google Analytics - Claude Code Integration
+# Google Analytics MCP - Growth Hacking Tools
 
-## Overview
-Este proyecto implementa un servidor MCP (Model Context Protocol) para integrar Google Analytics con Claude Code, proporcionando herramientas avanzadas de growth hacking y análisis de datos.
+## 🚀 Overview
 
-## Quick Setup
+Herramienta MCP que convierte Google Analytics en un motor de growth hacking para Claude. Diseñada para tomar decisiones rápidas basadas en datos.
+
+## 🎯 Filosofía: Speed > Reports
+
+No más reportes largos. Solo insights accionables en segundos.
+
+## 🛠️ Herramientas Disponibles
+
+### 📊 Análisis Básico
+
+#### `get_realtime_data`
+```
+"¿Cuántos usuarios activos tengo ahora?"
+"Muéstrame el tráfico en tiempo real por país"
+```
+
+#### `get_report_data`
+```
+"Dame el tráfico de los últimos 7 días"
+"¿Cuántas conversiones tuve ayer?"
+"Compara revenue esta semana vs la anterior"
+```
+
+### 🚀 Growth Hacking Tools
+
+#### `growth_pulse` ⭐
+```
+"Dame el growth pulse de hoy"
+```
+Retorna en 3 segundos:
+- ✅ Tráfico: +15% 🟢
+- ⚠️ Conversiones: -5% 🟡  
+- ✅ Revenue: +$2,340 🟢
+- 🚨 Alerta: "Mobile checkout roto"
+
+#### `find_growth_levers` 💎
+```
+"¿Dónde está mi mayor oportunidad?"
+```
+Encuentra:
+- Quick wins para implementar hoy
+- Experimentos con alto ROI
+- Canales para duplicar inversión
+
+#### `analyze_funnel` 🔍
+```
+"Analiza mi funnel de conversión"
+```
+Pasos ejemplo:
+1. Homepage → Product: 45% (-$34K perdidos)
+2. Product → Cart: 23% (-$128K perdidos)
+3. Cart → Purchase: 68% (-$45K perdidos)
+
+#### `track_experiment` 🧪
+```
+"Inicia test de precio $29 vs $39"
+"¿Cómo va mi test del CTA verde?"
+"¿Cuándo tendré significancia?"
+```
+
+#### `analyze_cohorts` 📈
+```
+"Muestra retención por cohortes semanales"
+"¿Qué cohorte tiene mejor LTV?"
+```
+
+#### `identify_power_users` 👑
+```
+"¿Quiénes son mis power users?"
+"Compara power users vs promedio"
+```
+
+#### `predict_churn` 🔮
+```
+"¿Qué usuarios van a cancelar?"
+```
+Retorna:
+- 234 usuarios en riesgo
+- 68% probabilidad de churn
+- Acción: "Email con 20% descuento"
+- Salvarías: $12,450
+
+#### `viral_coefficient` 🦠
+```
+"¿Cuál es mi coeficiente viral?"
+```
+- Coeficiente: 0.7 (no viral aún)
+- Necesitas: 0.3 referrals más/usuario
+- Top referrers identificados
+
+## 💡 Casos de Uso por Día
+
+### Lunes - Health Check
+```
+"Growth pulse de la semana"
+"¿Qué canal performó mejor?"
+"¿Alguna alerta crítica?"
+```
+
+### Martes - Experimentación  
+```
+"Lanza test nuevo onboarding"
+"Status de experimentos activos"
+"¿Qué test ganó la semana pasada?"
+```
+
+### Miércoles - Optimización
+```
+"¿Dónde está el mayor leak del funnel?"
+"¿Qué landing convierte mejor?"
+"Top 5 páginas que matan conversión"
+```
+
+### Jueves - Adquisición
+```
+"CAC por canal últimos 30 días"
+"¿Dónde duplico presupuesto?"
+"ROI de cada fuente de tráfico"
+```
+
+### Viernes - Retención
+```
+"Usuarios en riesgo de churn"
+"¿Qué feature tiene mejor retención?"
+"Segmentos con mejor LTV"
+```
+
+## 🏃 Quick Wins Checklist
+
+- [ ] Identificar mayor leak del funnel
+- [ ] Encontrar canal con mejor ROI
+- [ ] Lanzar test en página top
+- [ ] Segmentar power users
+- [ ] Activar campaña anti-churn
+- [ ] Optimizar para móvil
+- [ ] Duplicar en canal ganador
+
+## 📐 Métricas que Importan
+
+✅ **Mide esto:**
+- Weekly Active Users
+- Revenue per User  
+- Conversion Rate por step
+- LTV:CAC ratio
+- Viral coefficient
+- Churn rate
+
+❌ **Ignora esto:**
+- Page views totales
+- Bounce rate general
+- Time on site sin contexto
+- Downloads sin activación
+
+## 🎮 Comandos Rápidos
+
 ```bash
-# Build the project
-npm run build
+# Morning coffee check
+"growth pulse + top issue"
 
-# Add MCP to Claude Code
-claude mcp add google-analytics \
-  -e GA_PROPERTY_ID=294486074 \
-  -e GOOGLE_APPLICATION_CREDENTIALS=/Users/yeisongomez/Downloads/claude-dev-434502-cf8836f5cc5e.json \
-  -- node "/Users/yeisongomez/Documents/Proyectos/Agentes Ia/Growth Agent/mcp-google-analytics/dist/index.js"
+# Before meeting
+"funnel leaks + revenue impact"
 
-# Verify installation
-claude mcp list
+# Investment decision
+"LTV por canal + CAC"
+
+# Friday wins
+"best performing experiment this week"
+
+# Emergency
+"qué pasó con las conversiones hoy?"
 ```
 
-## Available Tools
+## 🔧 Configuración Avanzada
 
-### Basic Analytics
-1. **get_realtime_data** - Datos en tiempo real
-2. **get_report_data** - Reportes históricos
-3. **get_audience_data** - Demografía y audiencias
-
-### Growth Hacking Tools
-4. **analyze_funnel** - Análisis de embudos de conversión
-5. **analyze_cohorts** - Análisis de retención por cohortes
-6. **get_user_segments** - Segmentación avanzada de usuarios
-7. **analyze_conversion_paths** - Caminos hacia conversiones
-8. **get_growth_metrics** - Métricas de crecimiento (growth rate, LTV, CAC)
-9. **analyze_ab_test** - Análisis de tests A/B
-10. **get_user_journey** - Journey detallado de usuarios
-11. **identify_power_users** - Identificación de usuarios más valiosos
-
-## Usage Examples
-
-### Real-time Monitoring
-```
-Muéstrame cuántos usuarios activos tengo ahora mismo por país
+### Custom Events
+```json
+{
+  "conversion_events": ["purchase", "trial_start", "upgrade"],
+  "value_event": "purchase",
+  "churn_signal": "subscription_cancelled"
+}
 ```
 
-### Growth Analysis
+### Alertas Automáticas
 ```
-Calcula mi tasa de crecimiento de usuarios comparando con el mes anterior
-```
-
-### Funnel Optimization
-```
-Analiza mi funnel de conversión:
-- Homepage (pagePath: /)
-- Product View (eventName: view_item)  
-- Add to Cart (eventName: add_to_cart)
-- Purchase (eventName: purchase)
+- Conversion drop > 10%
+- Traffic spike > 50%
+- New high-value segment
+- Experiment reaches significance
 ```
 
-### User Segmentation
-```
-Segmenta mis usuarios por comportamiento y muéstrame:
-- Sesiones promedio
-- Duración de sesión
-- Páginas por sesión
-```
+## 🚨 Troubleshooting Rápido
 
-### Cohort Analysis
-```
-Muéstrame el análisis de cohortes semanales de retención del último mes
-```
+**No data?**
+- Check date range
+- Verify events are firing
+- Confirm property ID
 
-### Power Users
-```
-Identifica mis power users con más de 50 sesiones este mes y compáralos con usuarios promedio
-```
+**Slow response?**
+- Use shorter date ranges
+- Limit dimensions
+- Cache common queries
 
-### A/B Testing
-```
-Analiza los resultados del A/B test en la dimensión 'experimentVariant' con métricas de conversión
-```
+**Wrong metrics?**
+- Check timezone
+- Verify event names
+- Confirm currency
 
-## Configuration
+---
 
-### Environment Variables
-- `GA_PROPERTY_ID`: 294486074
-- `GOOGLE_APPLICATION_CREDENTIALS`: /Users/yeisongomez/Downloads/claude-dev-434502-cf8836f5cc5e.json
+💡 **Pro tip**: Empieza cada día con `growth pulse` y termina con `find growth levers` para el día siguiente.
 
-### Credentials Setup
-1. Google Cloud Console: Crear proyecto y habilitar Google Analytics Data API
-2. Crear cuenta de servicio y descargar JSON de credenciales
-3. En Google Analytics: Agregar email de cuenta de servicio como Viewer
-4. Configurar variables de entorno
-
-## Development Commands
-
-```bash
-# Install dependencies
-npm install
-
-# Build project
-npm run build
-
-# Development mode
-npm run dev
-
-# Start server directly
-npm start
-```
-
-## MCP Management
-
-```bash
-# List configured MCPs
-claude mcp list
-
-# Remove MCP
-claude mcp remove google-analytics
-
-# Add with different scope
-claude mcp add google-analytics -s user [command]
-claude mcp add google-analytics -s project [command]
-
-# Check MCP status
-/mcp
-```
-
-## Growth Metrics Available
-
-### Core Metrics
-- User Growth Rate
-- Revenue Growth Rate  
-- Retention Rate
-- Churn Rate
-- Customer Lifetime Value (LTV)
-- Customer Acquisition Cost (CAC)
-- Activation Rate
-- Viral Coefficient
-
-### Segmentation Types
-- **Behavior**: engagement, sessions, pages
-- **Technology**: device, OS, browser
-- **Acquisition**: source, medium, campaign
-- **Demographic**: age, gender, location
-
-## Troubleshooting
-
-### Common Issues
-1. **Permission denied**: Verificar que la cuenta de servicio tiene permisos en GA
-2. **Property not found**: Confirmar GA_PROPERTY_ID correcto
-3. **Credentials error**: Verificar ruta del archivo JSON
-4. **MCP not loading**: Reiniciar Claude Code después de configurar
-
-### Debug Commands
-```bash
-# Check if MCP is running
-node "/Users/yeisongomez/Documents/Proyectos/Agentes Ia/Growth Agent/mcp-google-analytics/dist/index.js"
-
-# Verify credentials file exists
-ls -la /Users/yeisongomez/Downloads/claude-dev-434502-cf8836f5cc5e.json
-
-# Check build output
-ls -la dist/
-```
-
-## Architecture
-
-```
-Claude Code → MCP Server → Google Analytics Data API → Your GA Property
-```
-
-### Components
-- **src/index.ts**: Main MCP server with tool handlers
-- **src/auth.ts**: Google Analytics authentication
-- **src/growth-tools.ts**: Schema definitions for growth tools
-- **dist/**: Compiled JavaScript output
-
-## Growth Hacking Workflows
-
-### 1. Daily Health Check
-```
-Hazme un health check diario:
-- Usuarios activos vs ayer
-- Tasa de conversión
-- Páginas con mayor drop-off
-```
-
-### 2. Weekly Growth Review
-```
-Análisis semanal:
-- Crecimiento de usuarios (WoW)
-- Retención de cohortes
-- Top sources de crecimiento
-- Experimentos activos
-```
-
-### 3. Monthly Deep Dive
-```
-Análisis mensual profundo:
-- Análisis completo de funnel
-- Segmentación de poder users
-- LTV por cohorte
-- Optimizaciones recomendadas
-```
-
-## Best Practices
-
-1. **Usar fechas específicas** para análisis comparativos
-2. **Segmentar por dimensiones relevantes** (source, device, etc.)
-3. **Definir eventos de conversión claros** para funnels
-4. **Comparar períodos similares** (mismo día de semana, etc.)
-5. **Filtrar datos por umbrales** para eliminar ruido
-6. **Combinar métricas** para insights más profundos
-
-## Data Privacy & Security
-
-- Credenciales almacenadas localmente
-- Conexión directa a Google Analytics (sin intermediarios)
-- Datos no persistidos en el MCP
-- Respeto a políticas de retención de GA
-- Solo acceso de lectura (Viewer permissions)
-
-## Next Steps
-
-1. **Alertas automáticas** para métricas críticas
-2. **Integración con otras fuentes** (CRM, email, ads)
-3. **Modelos predictivos** basados en datos históricos  
-4. **Dashboards automatizados** para stakeholders
-5. **Webhook support** para eventos en tiempo real
+🎯 **Remember**: If you can't take action on it, don't measure it.

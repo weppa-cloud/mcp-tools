@@ -13,7 +13,7 @@ Herramientas MCP para growth y analytics del equipo.
   "mcpServers": {
     "google-analytics": {
       "command": "npx",
-      "args": ["@tu-org/mcp-google-analytics"],
+      "args": ["@weppa-cloud/mcp-google-analytics"],
       "env": {
         "GOOGLE_ANALYTICS_CREDENTIALS": "/ruta/a/tu/credentials.json"
       }
@@ -50,7 +50,7 @@ mcp-tools/
 
 ```bash
 # Clonar el repo
-git clone https://github.com/tu-org/mcp-tools.git
+git clone https://github.com/weppa-cloud/mcp-tools.git
 cd mcp-tools
 
 # Instalar dependencias

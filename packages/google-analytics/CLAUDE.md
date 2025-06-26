@@ -4,6 +4,34 @@
 
 Herramienta MCP que convierte Google Analytics en un motor de growth hacking para Claude. Diseñada para tomar decisiones rápidas basadas en datos.
 
+## 📦 Estado Actual
+
+### ✅ Completado
+- **Publicado en NPM**: [@weppa-cloud/mcp-google-analytics](https://www.npmjs.com/package/@weppa-cloud/mcp-google-analytics)
+- **GitHub Monorepo**: [weppa-cloud/mcp-tools](https://github.com/weppa-cloud/mcp-tools)
+- **Instalación con npx**: No requiere instalación global
+- **Documentación completa**: QUICK_START.md, TEAM_SETUP.md, WORKFLOW.md
+
+### 🚧 En Desarrollo
+- [ ] Implementar `growth_pulse` con alertas automáticas
+- [ ] Agregar `predict_churn` con ML básico
+- [ ] Dashboard visual en Claude
+- [ ] Integración con Slack para alertas
+
+### 🎯 Quick Setup
+```json
+{
+  "mcpServers": {
+    "google-analytics": {
+      "command": "npx",
+      "args": ["@weppa-cloud/mcp-google-analytics"],
+      "env": {
+        "GOOGLE_ANALYTICS_CREDENTIALS": "/path/to/credentials.json"
+      }
+    }
+  }
+}
+
 ## 🎯 Filosofía: Speed > Reports
 
 No más reportes largos. Solo insights accionables en segundos.
@@ -215,3 +243,32 @@ Retorna:
 💡 **Pro tip**: Empieza cada día con `growth pulse` y termina con `find growth levers` para el día siguiente.
 
 🎯 **Remember**: If you can't take action on it, don't measure it.
+
+## 📊 Changelog
+
+### v1.0.0 (2024-12-26)
+- 🎉 Lanzamiento inicial
+- ✅ Herramientas básicas de analytics
+- ✅ Growth hacking tools (funnel, cohorts, segments)
+- ✅ Publicado en NPM como @weppa-cloud/mcp-google-analytics
+- ✅ Monorepo setup para futuras herramientas
+
+### Próximas Features (v1.1.0)
+- 🚧 `growth_pulse` - Dashboard instantáneo con alertas
+- 🚧 `predict_churn` - Predicción básica con ML
+- 🚧 `revenue_forecast` - Proyecciones automáticas
+- 🚧 `viral_coefficient` - Métricas de viralidad
+
+## 🤝 Contribuir
+
+1. Fork el repo: https://github.com/weppa-cloud/mcp-tools
+2. Crea tu feature branch: `git checkout -b feature/amazing-tool`
+3. Commit cambios: `git commit -m 'feat: Add amazing tool'`
+4. Push: `git push origin feature/amazing-tool`
+5. Abre un Pull Request
+
+## 📞 Soporte
+
+- **Slack**: #mcp-support
+- **GitHub Issues**: https://github.com/weppa-cloud/mcp-tools/issues
+- **Email**: growth@weppa.cloud

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Implementación de Tracking</title>
+    
+    <!-- Google tag (gtag.js) - REEMPLAZAR G-XXXXXXXXX con tu Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      // Configuración de GA4
+      gtag('config', 'G-XXXXXXXXX', {
+        send_page_view: true,
+        debug_mode: true // Activar para testing
+      });
+    </script>
+</head>
+<body>
+    <h1>Ejemplo de Tracking de Eventos para Funnel</h1>
+    
+    <!-- Simulación de Homepage -->
+    <section id="homepage">
+        <h2>Homepage</h2>
+        <p>El evento page_view se dispara automáticamente al cargar la página</p>
+        <button onclick="goToProduct()">Ver Producto</button>
+    </section>
+    
+    <!-- Simulación de Product Page -->
+    <section id="product" style="display:none;">
+        <h2>Página de Producto</h2>
+        <div class="product" data-id="PROD123" data-name="Producto Ejemplo" data-price="99.99" data-category="Categoría A">
+            <h3>Producto Ejemplo - $99.99</h3>
+            <button onclick="showForm()">Solicitar Información</button>
+        </div>
+    </section>
+    
+    <!-- Simulación de Form -->
+    <section id="form-section" style="display:none;">
+        <h2>Formulario de Contacto</h2>
+        <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <!-- Simulación de Thank You Page -->
+    <section id="thank-you" style="display:none;">
+        <h2>¡Gracias por tu compra!</h2>
+        <p>Tu pedido #<span id="order-id"></span> ha sido procesado</p>
+    </section>
+    
+    <hr>
+    
+    <!-- Debug Panel -->
+    <div style="background: #f0f0f0; padding: 20px; margin-top: 40px;">
+        <h3>Panel de Debug - Eventos Disparados:</h3>
+        <div id="debug-log"></div>
+    </div>
+    
+    <script>
+    // Helper para logging
+    function logEvent(eventName, parameters) {
+        const log = document.getElementById('debug-log');
+        const entry = document.createElement('div');
+        entry.innerHTML = `<strong>${new Date().toLocaleTimeString()}</strong> - ${eventName}: ${JSON.stringify(parameters)}`;
+        log.appendChild(entry);
+    }
+    
+    // Función para simular navegación a producto
+    function goToProduct() {
+        // Ocultar homepage, mostrar producto
+        document.getElementById('homepage').style.display = 'none';
+        document.getElementById('product').style.display = 'block';
+        
+        // Obtener datos del producto
+        const product = document.querySelector('.product');
+        const productData = {
+            id: product.dataset.id,
+            name: product.dataset.name,
+            price: parseFloat(product.dataset.price),
+            category: product.dataset.category
+        };
+        
+        // Disparar evento view_item
+        gtag('event', 'view_item', {
+            currency: 'USD',
+            value: productData.price,
+            items: [{
+                item_id: productData.id,
+                item_name: productData.name,
+                item_category: productData.category,
+                price: productData.price,
+                quantity: 1
+            }]
+        });
+        
+        logEvent('view_item', productData);
+    }
+    
+    // Función para mostrar formulario
+    function showForm() {
+        document.getElementById('product').style.display = 'none';
+        document.getElementById('form-section').style.display = 'block';
+    }
+    
+    // Manejar envío de formulario
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        // Disparar evento form_submit
+        gtag('event', 'form_submit', {
+            form_name: 'contact_form',
+            form_destination: window.location.href,
+            form_submit_text: 'Enviar',
+            value: 1
+        });
+        
+        logEvent('form_submit', {form_name: 'contact_form'});
+        
+        // Simular procesamiento y compra
+        setTimeout(() => {
+            simulatePurchase();
+        }, 1000);
+    }
+    
+    // Simular compra
+    function simulatePurchase() {
+        const orderId = 'ORD' + Math.floor(Math.random() * 10000);
+        const orderData = {
+            id: orderId,
+            total: 99.99,
+            items: [{
+                item_id: 'PROD123',
+                item_name: 'Producto Ejemplo',
+                item_category: 'Categoría A',
+                price: 99.99,
+                quantity: 1
+            }]
+        };
+        
+        // Disparar evento purchase
+        gtag('event', 'purchase', {
+            transaction_id: orderData.id,
+            value: orderData.total,
+            currency: 'USD',
+            items: orderData.items
+        });
+        
+        logEvent('purchase', {transaction_id: orderId, value: orderData.total});
+        
+        // Mostrar thank you page
+        document.getElementById('form-section').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+        document.getElementById('order-id').textContent = orderId;
+    }
+    
+    // Enhanced Ecommerce - Medición adicional
+    function trackAddToCart(productData) {
+        gtag('event', 'add_to_cart', {
+            currency: 'USD',
+            value: productData.price,
+            items: [{
+                item_id: productData.id,
+                item_name: productData.name,
+                item_category: productData.category,
+                price: productData.price,
+                quantity: 1
+            }]
+        });
+    }
+    
+    function trackRemoveFromCart(productData) {
+        gtag('event', 'remove_from_cart', {
+            currency: 'USD',
+            value: productData.price,
+            items: [{
+                item_id: productData.id,
+                item_name: productData.name,
+                item_category: productData.category,
+                price: productData.price,
+                quantity: 1
+            }]
+        });
+    }
+    
+    function trackBeginCheckout(cartValue) {
+        gtag('event', 'begin_checkout', {
+            currency: 'USD',
+            value: cartValue,
+            coupon: ''
+        });
+    }
+    
+    // Custom Events - Para acciones específicas de tu negocio
+    function trackCustomAction(actionName, parameters) {
+        gtag('event', actionName, {
+            custom_parameter: parameters.value,
+            event_category: 'engagement',
+            event_label: parameters.label
+        });
+    }
+    
+    // User Properties - Para segmentación avanzada
+    function setUserProperties(properties) {
+        gtag('set', 'user_properties', {
+            user_type: properties.type,
+            subscription_level: properties.level,
+            lifetime_value: properties.ltv
+        });
+    }
+    
+    // Measurement Protocol - Para eventos server-side
+    function sendServerEvent(eventData) {
+        // Esto se enviaría desde tu servidor
+        const measurementId = 'G-XXXXXXXXX';
+        const apiSecret = 'YOUR_API_SECRET'; // Obtener de GA4 Admin
+        
+        fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`, {
+            method: 'POST',
+            body: JSON.stringify({
+                client_id: 'unique_client_id',
+                events: [{
+                    name: eventData.name,
+                    params: eventData.params
+                }]
+            })
+        });
+    }
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #debug-log div {
+            margin: 5px 0;
+            padding: 5px;
+            background: white;
+            border-left: 3px solid #4CAF50;
+        }
+    </style>
+</body>
+</html>

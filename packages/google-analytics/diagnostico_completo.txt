@@ -1,0 +1,446 @@
+====================================================================
+           COMPREHENSIVE GOOGLE ANALYTICS ANALYSIS
+====================================================================
+Analysis Date: 2025-06-24T21:24:09.376Z
+Property ID: 294486074
+====================================================================
+
+
+1. REAL-TIME DATA ANALYSIS
+==========================
+
+=== Real-time Active Users ===
+
+Results for: Real-time Activity
+----------------------------------------------------------------------------------------------------
+country	deviceCategory	unifiedScreenName	activeUsers	screenPageViews	eventCount
+Colombia	mobile	Las mejores agencias de viaje en Colombia 2023	4	4	23
+Mexico	mobile	Home • ColombiaTours.Travel	4	4	16
+Colombia	desktop	Disfruta del Eje Cafetero con ColombiaTours.Travel	2	2	10
+Ecuador	mobile	Viajar a Colombia con todo incluido	2	2	9
+Argentina	desktop	Requisitos para viajar a Colombia desde Argentina	1	1	4
+Argentina	mobile	Un viaje inolvidable a la ruta del café Colombia	1	1	4
+Colombia	desktop	Home • ColombiaTours.Travel	1	0	3
+Colombia	desktop	Los mejores precios en colombia vuelos: ¡Viaja sin gastar de más!	1	0	1
+Colombia	desktop	PlanTurístico Pueblos de Santander, Llénate de Aventura 2021	1	1	2
+Colombia	desktop	los 15 mejores lugares turísticos de Colombia	1	1	4
+Colombia	desktop	¿Cuánto cuesta viajar a Cartagena de Indias? • ColombiaTours.Travel	1	2	2
+Colombia	desktop	¿Cómo se que una agencia de viajes es legal en Colombia?	1	1	5
+Colombia	mobile	Disfruta del Eje Cafetero con ColombiaTours.Travel	1	1	4
+Colombia	mobile	Paquetes de Viajes a Colombia	1	1	6
+Colombia	mobile	¿Cuánto cuesta viajar a Colombia desde México?	1	1	5
+Colombia	mobile	¿Cómo se que una agencia de viajes es legal en Colombia?	1	2	7
+Ecuador	desktop	Arma tu plan a Colombia, el país del realismo mágico.	1	1	3
+Ecuador	mobile	Eje Cafetero Guía de viajes - Paisaje Cultural Cafetero, que hacer y ver.	1	1	5
+Germany	desktop	Home • ColombiaTours.Travel	1	1	4
+Germany	mobile	Home • ColombiaTours.Travel	1	1	4
+----------------------------------------------------------------------------------------------------
+
+2. HISTORICAL DATA ANALYSIS (Last 30 Days)
+==========================================
+
+=== Historical Overview ===
+
+Results for: Historical Data - Last 30 Days
+----------------------------------------------------------------------------------------------------
+date	sessionSource	sessionMedium	sessions	totalUsers	newUsers	screenPageViews	engagementRate	averageSessionDuration	bounceRate
+20250624	(not set)	(not set)	264	257	0	163	0.007575757575757576	128.46018407575758	0.99242424242424243
+20250624	google	organic	190	179	158	246	0.95789473684210524	166.15130694210526	0.042105263157894736
+20250624	(data not available)	(data not available)	164	164	164	210	1	127.58916435365853	0
+20250624	google	cpc	139	126	79	161	0.91366906474820142	129.00643940287767	0.086330935251798566
+20250624	fb	paid	55	55	53	55	1	0.0081684909090909089	0
+20250624	(direct)	(none)	48	42	36	55	0.97916666666666663	166.58691245833333	0.020833333333333332
+20250624	an	paid	6	6	6	6	1	0.052372666666666672	0
+20250624	bing	organic	5	5	5	8	1	683.003057	0
+20250624	co.search.yahoo.com	referral	2	2	1	1	0.5	0	0.5
+20250624	perplexity	(not set)	2	2	2	7	1	897.0462565	0
+20250624	search.google.com	referral	2	1	0	4	1	608.274856	0
+20250624	facebook.com	referral	1	1	1	1	1	0	0
+20250624	m.facebook.com	referral	1	1	1	1	1	7.745597	0
+20250624	mx.search.yahoo.com	referral	1	1	1	1	1	859.261027	0
+20250624	tagassistant.google.com	referral	1	1	0	1	1	0	0
+20250624	youtube.com	referral	1	1	1	1	1	0	0
+20250623	google	cpc	564	526	476	913	0.96808510638297873	162.4999924822695	0.031914893617021274
+20250623	google	organic	373	342	320	547	0.95442359249329756	160.1487914316354	0.045576407506702415
+20250623	fb	paid	62	62	56	66	1	8.2573976774193554	0
+20250623	(direct)	(none)	50	45	43	59	1	78.17036856	0
+20250623	an	paid	42	35	31	47	0.97619047619047616	30.534407214285714	0.023809523809523808
+20250623	(not set)	(not set)	20	18	12	63	1	237.64621659999997	0
+20250623	bing	organic	6	6	5	8	1	143.09754083333334	0
+20250623	co.search.yahoo.com	referral	4	4	4	6	1	619.22038325	0
+20250623	l.wl.co	referral	3	2	1	7	1	105.90736933333334	0
+20250623	(data not available)	(data not available)	2	2	2	2	1	0.023387	0
+20250623	es.search.yahoo.com	referral	2	2	1	1	0.5	194.804358	0.5
+20250623	facebook.com	referral	2	2	2	2	1	10.320829	0
+20250623	ar.search.yahoo.com	referral	1	1	1	1	1	119.204861	0
+20250623	colombiatourstravel.knoji.com	referral	1	1	1	3	1	1429.612134	0
+20250623	ecosia.org	organic	1	1	1	1	1	0.000515	0
+20250623	yahoo	organic	1	1	1	1	1	1.933373	0
+20250623	yandex	organic	1	1	1	1	1	0.000756	0
+20250623	youtube.com	referral	1	1	1	6	1	1406.903923	0
+20250622	google	cpc	606	558	481	918	0.976897689768977	160.41849501650165	0.0231023102310231
+20250622	google	organic	344	317	299	482	0.95348837209302328	156.65682660174417	0.046511627906976744
+20250622	an	paid	104	98	94	124	0.98076923076923073	120.7752199423077	0.019230769230769232
+20250622	fb	paid	55	55	49	57	1	8.2208179636363639	0
+20250622	(direct)	(none)	49	46	41	77	0.97959183673469385	130.01528706122448	0.020408163265306121
+20250622	(not set)	(not set)	12	12	5	11	0.75	57.740078333333337	0.25
+20250622	(data not available)	(data not available)	8	8	7	27	1	456.222427125	0
+20250622	bing	organic	7	6	6	8	0.8571428571428571	302.15337771428574	0.14285714285714285
+20250622	co.search.yahoo.com	referral	2	2	1	2	1	181.0840695	0
+20250622	plagiarismdetector.net	referral	2	1	1	5	1	381.913388	0
+20250622	chatgpt.com	referral	1	1	0	1	1	0.000761	0
+20250622	es.search.yahoo.com	referral	1	1	1	12	1	1301.687698	0
+20250622	facebook.com	referral	1	1	1	1	1	0.000654	0
+20250622	l.wl.co	referral	1	1	0	2	1	49.068112	0
+20250622	yahoo	organic	1	1	1	1	1	0.000729	0
+20250622	youtube.com	referral	1	1	1	1	1	87.344035	0
+----------------------------------------------------------------------------------------------------
+
+3. AUDIENCE DEMOGRAPHICS AND INTERESTS
+======================================
+
+=== Audience Demographics ===
+
+Results for: Audience Demographics
+----------------------------------------------------------------------------------------------------
+userAgeBracket	userGender	country	activeUsers	sessions	engagementRate	averageSessionDuration
+unknown	unknown	Mexico	8173	9781	0.97842756364379924	144.7115648171966
+unknown	unknown	Colombia	3601	4258	0.94316580554250817	162.5651273276186
+unknown	unknown	Spain	2129	2566	0.95908028059236161	181.48600206819953
+unknown	unknown	Argentina	1583	1854	0.9563106796116505	130.20427623570657
+unknown	unknown	Chile	1211	1452	0.96487603305785119	160.68745373140496
+unknown	unknown	Ecuador	1211	1382	0.97467438494934877	126.83188773227207
+unknown	unknown	United States	1161	1401	0.96573875802997855	149.27312111134904
+unknown	unknown	Peru	1155	1310	0.94809160305343509	143.16197107480914
+25-34	female	Mexico	856	1039	0.95380173243503363	168.37847169489893
+unknown	unknown	Panama	764	890	0.96516853932584268	160.10920748089887
+unknown	unknown	Costa Rica	759	902	0.96895787139689582	204.8254118547672
+45-54	female	Mexico	708	860	0.96162790697674416	179.22290421046512
+25-34	female	Colombia	677	859	0.92549476135040742	218.98323726658907
+55-64	female	Mexico	573	692	0.95953757225433522	159.15464441618496
+35-44	female	Mexico	499	599	0.95659432387312182	156.64038314858095
+unknown	unknown	Germany	438	443	0.98871331828442433	40.763688927765237
+18-24	female	Colombia	413	526	0.91825095057034223	295.05716598288973
+55-64	female	Colombia	400	463	0.97624190064794814	177.18990892872571
+55-64	male	Mexico	395	475	0.968421052631579	177.53703125473686
+25-34	male	Mexico	383	468	0.97222222222222221	186.42827883547011
+35-44	female	Colombia	375	488	0.92008196721311475	172.82409885655741
+45-54	male	Mexico	355	443	0.95936794582392781	181.65267643340857
+65+	female	Argentina	350	408	0.94852941176470584	182.79709677941176
+45-54	female	Colombia	325	358	0.96927374301675973	208.67391762011172
+45-54	female	Argentina	309	373	0.938337801608579	200.89006924128688
+unknown	female	Colombia	295	369	0.89430894308943087	184.62291893495933
+35-44	male	Mexico	260	299	0.96321070234113715	182.0205019832776
+18-24	female	Mexico	253	302	0.96026490066225167	199.8417311887417
+unknown	female	Mexico	232	285	0.90526315789473688	259.21274996140352
+55-64	female	Spain	225	266	0.95864661654135341	237.83940204135337
+----------------------------------------------------------------------------------------------------
+
+=== Audience Technology Profile ===
+
+Results for: Audience Technology Profile
+----------------------------------------------------------------------------------------------------
+deviceCategory	operatingSystem	browser	activeUsers	sessions	engagementRate
+mobile	Android	Chrome	16301	19348	0.98687202811660124
+mobile	iOS	Safari	7678	9284	0.97490305902628183
+desktop	Windows	Chrome	5991	7631	0.88795701742890842
+mobile	Android	Android Webview	2421	2674	0.994016454749439
+mobile	iOS	Chrome	2197	2737	0.97807818779685785
+desktop	Windows	Edge	721	904	0.875
+desktop	Macintosh	Chrome	680	924	0.86038961038961037
+mobile	iOS	Safari (in-app)	496	505	0.994059405940594
+mobile	Android	Samsung Internet	479	598	0.94314381270903014
+desktop	Macintosh	Safari	476	558	0.91397849462365588
+desktop	Windows	Firefox	221	277	0.927797833935018
+desktop	Linux	Chrome	179	209	0.8995215311004785
+tablet	Android	Chrome	131	162	0.96296296296296291
+desktop	Windows	Opera	76	98	0.86734693877551017
+tablet	iOS	Chrome	74	89	1
+tablet	iOS	Safari	73	88	1
+desktop	Chrome OS	Chrome	51	61	0.86885245901639341
+desktop	Linux	Firefox	39	43	0.97674418604651159
+tablet	Android	Android Webview	35	37	0.972972972972973
+mobile	Android	Firefox	29	32	0.96875
+----------------------------------------------------------------------------------------------------
+
+4. GROWTH METRICS ANALYSIS
+==========================
+
+=== Growth Metrics Comparison ===
+
+Growth Metrics - Period over Period Comparison
+--------------------------------------------------------------------------------
+Total Users: Current: 39732, Previous: 38714, Growth: 2.63%
+New Users: Current: 38295, Previous: 37528, Growth: 2.04%
+Sessions: Current: 46080, Previous: 47186, Growth: -2.34%
+Conversions: Current: 21909, Previous: 135490, Growth: -83.83%
+Revenue: Current: 0, Previous: 0, Growth: N/A%
+Engagement Rate: Current: 0.6299262152777778, Previous: 0.9660068664434366, Growth: -34.79%
+--------------------------------------------------------------------------------
+
+=== Daily Growth Trend ===
+
+Results for: Daily Growth Trend
+----------------------------------------------------------------------------------------------------
+date	totalUsers	newUsers	sessions
+20250525	1340	1211	1466
+20250526	1442	1290	1593
+20250527	1702	1538	1882
+20250528	1770	1584	1969
+20250529	1407	1255	1588
+20250530	1291	1155	1429
+20250531	1244	1118	1368
+20250601	1491	1342	1635
+20250602	1507	1362	1657
+20250603	1656	1493	1829
+20250604	1653	1486	1842
+20250605	1527	1380	1678
+20250606	1394	1225	1515
+20250607	1694	1534	1860
+20250608	1396	1246	1534
+20250609	1363	1231	1508
+20250610	1582	1400	1749
+20250611	1506	1325	1651
+20250612	1346	1188	1486
+20250613	1386	1240	1539
+20250614	1423	1294	1538
+20250615	1334	1199	1464
+20250616	1232	1096	1384
+20250617	1239	1090	1394
+20250618	1104	989	1218
+20250619	1152	1028	1273
+20250620	908	815	996
+20250621	1050	959	1126
+20250622	1104	988	1195
+20250623	1045	959	1136
+20250624	632	508	687
+----------------------------------------------------------------------------------------------------
+
+5. USER SEGMENTS ANALYSIS
+=========================
+
+=== Behavior Segments ===
+
+Error in Behavior Segments: 3 INVALID_ARGUMENT: 
+No data available
+
+=== Technology Segments ===
+
+Results for: Technology Segments
+----------------------------------------------------------------------------------------------------
+deviceCategory	operatingSystem	screenResolution	activeUsers	sessions	engagementRate	bounceRate
+mobile	iOS	390x844	2708	3290	0.97872340425531912	0.021276595744680851
+mobile	Android	384x832	2121	2465	0.97728194726166329	0.022718052738336714
+desktop	Windows	1366x768	1908	2460	0.88699186991869916	0.11300813008130081
+mobile	Android	393x873	1966	2279	0.98069328652917942	0.019306713470820535
+mobile	Android	360x800	1895	2221	0.97928860873480417	0.020711391265195857
+desktop	Windows	1920x1080	1773	2167	0.88186432856483621	0.11813567143516382
+mobile	iOS	393x852	1723	2111	0.97063003315964	0.029369966840360019
+mobile	iOS	430x932	1438	1747	0.97538637664567829	0.024613623354321695
+desktop	Windows	1536x864	1226	1711	0.86732904734073646	0.1326709526592636
+mobile	Android	412x915	1439	1655	0.97764350453172211	0.022356495468277945
+mobile	iOS	414x896	1261	1475	0.97966101694915253	0.020338983050847456
+mobile	Android	360x780	897	1048	0.9742366412213741	0.025763358778625955
+mobile	iOS	428x926	802	982	0.97963340122199594	0.020366598778004074
+mobile	iOS	375x812	793	908	0.99008810572687223	0.009911894273127754
+mobile	Android	432x960	716	828	0.97946859903381644	0.020531400966183576
+desktop	Windows	1280x720	648	792	0.875	0.125
+mobile	Android	385x854	696	791	0.98356510745891279	0.01643489254108723
+mobile	iOS	440x956	607	749	0.96662216288384517	0.033377837116154871
+mobile	Android	412x892	630	747	0.97590361445783136	0.024096385542168676
+mobile	Android	384x854	592	691	0.98697539797395084	0.013024602026049204
+----------------------------------------------------------------------------------------------------
+
+6. CONVERSION FUNNEL ANALYSIS
+=============================
+Funnel Step Analysis:
+--------------------------------------------------------------------------------
+
+=== Funnel - Homepage Visits ===
+
+Homepage Visits: 4233 users
+
+=== Funnel - Product/Service Views ===
+
+Product/Service Views: No data available
+
+=== Funnel - Add to Cart ===
+
+Add to Cart: No data available
+
+=== Funnel - Checkout ===
+
+Checkout: No data available
+
+=== Funnel - Purchase ===
+
+Purchase: No data available
+--------------------------------------------------------------------------------
+
+7. COHORT ANALYSIS (Last 90 Days)
+==================================
+
+=== Weekly Cohort Retention ===
+
+Error in Weekly Cohort Retention: 3 INVALID_ARGUMENT: Cohort dimensions can only be used in requests with a CohortSpec.
+
+8. USER JOURNEY ANALYSIS
+========================
+
+=== Top User Journeys ===
+
+Error in Top User Journeys: 3 INVALID_ARGUMENT: 
+No data available
+
+=== User Event Flow ===
+
+Results for: User Event Flow
+----------------------------------------------------------------------------------------------------
+eventName	pagePath	eventCount	totalUsers
+Vista_de_pagina	/	1383	1089
+page_view	/	1383	1090
+session_start	/	1062	1000
+first_visit	/	910	910
+Vista_de_pagina	/los-mejores-paquetes-de-viajes-a-colombia/	754	513
+user_engagement	/los-mejores-paquetes-de-viajes-a-colombia/	754	460
+page_view	/los-mejores-paquetes-de-viajes-a-colombia/	753	513
+page_view	/los-10-mejores-lugares-turisticos-de-colombia/	734	601
+Vista_de_pagina	/los-10-mejores-lugares-turisticos-de-colombia/	731	600
+user_engagement	/	703	532
+session_start	/los-10-mejores-lugares-turisticos-de-colombia/	663	591
+first_visit	/los-10-mejores-lugares-turisticos-de-colombia/	563	563
+page_view	/viajar-a-colombia-con-todo-incluido-global/	482	378
+Vista_de_pagina	/viajar-a-colombia-con-todo-incluido-global/	481	378
+Vista_de_pagina	/terminos-y-condiciones/politica-de-privacidad/	447	401
+page_view	/terminos-y-condiciones/politica-de-privacidad/	447	402
+user_engagement	/los-10-mejores-lugares-turisticos-de-colombia/	446	395
+Vista_de_pagina	/que-hacer-en-cartagena-de-indias-20-act/	443	339
+page_view	/que-hacer-en-cartagena-de-indias-20-act/	443	338
+user_engagement	/terminos-y-condiciones/politica-de-privacidad/	423	374
+Vista_de_pagina	/l/plan-eje-cafetero-disfruta/	389	248
+page_view	/l/plan-eje-cafetero-disfruta/	387	245
+session_start	/viajar-a-colombia-con-todo-incluido-global/	387	353
+session_start	/que-hacer-en-cartagena-de-indias-20-act/	377	321
+Vista_de_pagina	/las-mejores-agencias-de-viaje-en-colombia/	337	272
+page_view	/las-mejores-agencias-de-viaje-en-colombia/	336	273
+first_visit	/viajar-a-colombia-con-todo-incluido-global/	329	329
+user_engagement	/l/plan-eje-cafetero-disfruta/	302	192
+first_visit	/que-hacer-en-cartagena-de-indias-20-act/	289	289
+session_start	/las-mejores-agencias-de-viaje-en-colombia/	286	259
+----------------------------------------------------------------------------------------------------
+
+9. POWER USERS IDENTIFICATION
+=============================
+
+=== Power Users - High Engagement ===
+
+Results for: Power Users with High Engagement
+----------------------------------------------------------------------------------------------------
+sessionSource	deviceCategory	country	engagedSessions	totalUsers	averageSessionDuration	screenPageViewsPerSession	sessions
+google	mobile	Mexico	12087	9812	142.62320972158676	1.3608339417538735	12327
+google	mobile	Colombia	4664	4281	134.28136140628956	1.3676656817222457	4738
+google	mobile	Spain	2641	2230	172.7923398956392	1.4640327991054789	2683
+google	mobile	Argentina	2396	2125	123.2429999691485	1.3035787741670095	2431
+google	desktop	Colombia	2050	1876	229.58691127427079	1.5198084457988681	2297
+google	mobile	Chile	1771	1575	167.4305967655819	1.3022614451185879	1813
+google	desktop	Mexico	1717	1538	273.440542779374	1.7614161108260646	1949
+google	mobile	Peru	1097	978	190.27345909849157	1.3362910381543922	1127
+google	mobile	Panama	1082	948	162.94294671055005	1.4923354373309288	1109
+google	mobile	Ecuador	1055	941	152.64957892350745	1.416044776119403	1072
+google	mobile	Costa Rica	1027	881	204.83254707980768	1.3894230769230769	1040
+google	mobile	United States	1007	879	162.48547813826679	1.4128529698149952	1027
+fb	mobile	Mexico	918	874	5.4952907668845308	1.0359477124183007	918
+google	desktop	Spain	823	748	272.00715165413538	1.5800214822771215	931
+google	desktop	Argentina	653	559	277.13315498670215	1.553191489361702	752
+google	desktop	Peru	474	444	239.355016155914	1.4623655913978495	558
+fb	mobile	Peru	463	447	6.8504660754310347	1.0301724137931034	464
+(direct)	desktop	Germany	386	387	27.829547316062175	1.0647668393782384	386
+google	desktop	Chile	382	338	220.13201968764571	1.4382284382284383	429
+an	mobile	Ecuador	378	345	57.927929567282327	1.3720316622691293	379
+google	desktop	Ecuador	373	337	281.26937404460097	1.7746478873239437	426
+(direct)	mobile	Mexico	355	290	134.78259478272983	1.4930362116991645	359
+google	desktop	Panama	319	291	227.81419137142856	1.7171428571428571	350
+google	desktop	Costa Rica	286	261	261.07578219877672	1.4617737003058104	327
+google	desktop	United States	273	246	220.19419566666662	1.5940594059405941	303
+an	mobile	Argentina	272	247	115.11086722299653	1.4076655052264808	287
+(direct)	mobile	Colombia	250	223	162.24368785018729	1.5692883895131087	267
+an	mobile	Peru	202	190	99.926000302439036	1.4097560975609755	205
+(data not available)	mobile	Mexico	198	198	206.4262955656566	2.2323232323232323	198
+(direct)	desktop	Colombia	176	102	282.52566846341466	1.8292682926829269	205
+----------------------------------------------------------------------------------------------------
+
+=== High Value Users ===
+
+No data available
+
+10. CONVERSION PATHS ANALYSIS
+=============================
+
+=== Conversion Attribution Paths ===
+
+Error in Conversion Attribution Paths: 3 INVALID_ARGUMENT: Found duplicate dimensions/metrics.
+No data available
+
+=== Time to Conversion ===
+
+Results for: Conversion Timing Patterns
+----------------------------------------------------------------------------------------------------
+dayOfWeek	hour	conversions	sessions	engagementRate
+2	14	1494	568	0.94718309859154926
+0	16	1482	512	0.9609375
+0	14	1470	512	0.974609375
+2	12	1433	482	0.96058091286307057
+1	20	1402	505	0.96633663366336631
+1	16	1390	469	0.94882729211087424
+2	11	1381	495	0.93333333333333335
+1	15	1349	439	0.94305239179954437
+2	13	1347	510	0.93333333333333335
+2	16	1331	506	0.950592885375494
+0	15	1327	512	0.974609375
+1	11	1326	454	0.960352422907489
+3	14	1323	450	0.96
+1	21	1320	482	0.96473029045643155
+0	13	1315	462	0.96969696969696972
+0	12	1312	453	0.9713024282560706
+3	15	1298	414	0.94927536231884058
+3	13	1295	436	0.944954128440367
+2	21	1280	434	0.96082949308755761
+3	12	1279	431	0.95823665893271459
+2	15	1274	443	0.93905191873589167
+1	17	1273	458	0.94104803493449785
+1	12	1248	412	0.970873786407767
+1	14	1246	437	0.93363844393592677
+1	13	1228	441	0.963718820861678
+2	17	1215	398	0.93718592964824121
+0	11	1211	407	0.97788697788697787
+3	11	1211	427	0.955503512880562
+1	10	1198	424	0.97405660377358494
+2	19	1180	414	0.96376811594202894
+----------------------------------------------------------------------------------------------------
+
+====================================================================
+                     ANALYSIS SUMMARY
+====================================================================
+
+KEY METRICS OVERVIEW:
+--------------------------------------------------------------------------------
+Total Users (Last 30 days): 558
+New Users: 481 (86.20%)
+Total Sessions: 3213
+Total Page Views: 4384
+Average Engagement Rate: 0.95%
+Average Session Duration: 237.50 seconds
+
+KEY INSIGHTS:
+--------------------------------------------------------------------------------
+1. Real-time Activity: Monitor current user behavior and traffic sources
+2. Growth Trends: Analyze period-over-period growth in users, sessions, and revenue
+3. Audience Profile: Understand demographics, technology usage, and behavior patterns
+4. Conversion Funnel: Identify drop-off points and optimization opportunities
+5. User Retention: Track cohort retention rates and engagement over time
+6. Power Users: Identify and analyze highly engaged user segments
+7. Conversion Paths: Understand which channels and campaigns drive conversions
+
+====================================================================
+
+Analysis completed successfully!

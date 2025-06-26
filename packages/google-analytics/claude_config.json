@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "google-analytics": {
+      "command": "node",
+      "args": ["/Users/yeisongomez/Documents/Proyectos/Agentes Ia/Growth Agent/mcp-google-analytics/dist/index.js"],
+      "env": {
+        "GA_PROPERTY_ID": "294486074",
+        "GOOGLE_APPLICATION_CREDENTIALS": "/Users/yeisongomez/Downloads/claude-dev-434502-cf8836f5cc5e.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@tu-org/mcp-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP tools monorepo for growth and analytics",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "publish-all": "npm publish --workspaces --access public"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tu-org/mcp-tools.git"
+  },
+  "author": "Tu Equipo",
+  "license": "MIT"
+}

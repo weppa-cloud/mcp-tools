@@ -17,6 +17,7 @@ import {
   GetUserJourneySchema,
   GetPowerUsersSchema,
 } from './growth-tools.js';
+import { growthPulse, analyzeFunnel as analyzeFunnelMVP, getTopChannels } from './mvp-tools.js';
 
 const GetRealtimeDataSchema = z.object({
   metrics: z.array(z.string()).describe('Metrics to retrieve (e.g., activeUsers, screenPageViews)'),
@@ -37,6 +38,23 @@ const GetAudienceDataSchema = z.object({
   dimensions: z.array(z.string()).describe('Audience dimensions (e.g., userAgeBracket, userGender, country)'),
   metrics: z.array(z.string()).optional().default(['activeUsers']).describe('Metrics to retrieve'),
   limit: z.number().optional().default(10).describe('Maximum number of rows to return'),
+});
+
+// MVP Schemas
+const GrowthPulseSchema = z.object({
+  timeframe: z.enum(['today', 'yesterday', 'last7days']).optional().default('today').describe('Time period for analysis'),
+});
+
+const SimpleFunnelSchema = z.object({
+  steps: z.array(z.object({
+    name: z.string().describe('Step name (e.g., Homepage, Product Page, Cart)'),
+    eventName: z.string().optional().describe('Event name to track (e.g., view_item, add_to_cart)'),
+    pagePath: z.string().optional().describe('Page path to track (e.g., /products, /cart)'),
+  })).describe('Funnel steps to analyze'),
+});
+
+const TopChannelsSchema = z.object({
+  metric: z.enum(['revenue', 'conversions', 'users']).optional().default('revenue').describe('Metric to rank channels by'),
 });
 
 class GoogleAnalyticsMCPServer {
@@ -75,6 +93,23 @@ class GoogleAnalyticsMCPServer {
   private setupHandlers() {
     this.server.setRequestHandler(ListToolsRequestSchema, async () => ({
       tools: [
+        // MVP Tools - High Priority
+        {
+          name: 'growth_pulse',
+          description: '🚀 Get instant growth health check with traffic, conversions, and revenue alerts',
+          inputSchema: GrowthPulseSchema,
+        },
+        {
+          name: 'funnel_analysis',
+          description: '💰 Analyze conversion funnel to find where you\'re losing money',
+          inputSchema: SimpleFunnelSchema,
+        },
+        {
+          name: 'top_channels',
+          description: '📊 Find your best performing channels for quick wins',
+          inputSchema: TopChannelsSchema,
+        },
+        // Original Tools
         {
           name: 'get_realtime_data',
           description: 'Get real-time Google Analytics data',
@@ -141,6 +176,17 @@ class GoogleAnalyticsMCPServer {
       }
 
       switch (request.params.name) {
+        // MVP Tools
+        case 'growth_pulse':
+          return await this.getGrowthPulse(request.params.arguments);
+        
+        case 'funnel_analysis':
+          return await this.getFunnelAnalysis(request.params.arguments);
+        
+        case 'top_channels':
+          return await this.getTopChannelsAnalysis(request.params.arguments);
+        
+        // Original Tools
         case 'get_realtime_data':
           return await this.getRealtimeData(request.params.arguments);
         
@@ -787,6 +833,43 @@ class GoogleAnalyticsMCPServer {
           totalPowerUsers: powerUsers.length,
           averageUser: averageUserData,
         }, null, 2),
+      }],
+    };
+  }
+
+  // MVP Tool Methods
+  private async getGrowthPulse(args: unknown) {
+    const params = GrowthPulseSchema.parse(args);
+    const result = await growthPulse(this.client!, this.propertyId, params.timeframe);
+    
+    return {
+      content: [{
+        type: 'text',
+        text: JSON.stringify(result, null, 2),
+      }],
+    };
+  }
+
+  private async getFunnelAnalysis(args: unknown) {
+    const params = SimpleFunnelSchema.parse(args);
+    const result = await analyzeFunnelMVP(this.client!, this.propertyId, params.steps);
+    
+    return {
+      content: [{
+        type: 'text',
+        text: JSON.stringify(result, null, 2),
+      }],
+    };
+  }
+
+  private async getTopChannelsAnalysis(args: unknown) {
+    const params = TopChannelsSchema.parse(args);
+    const result = await getTopChannels(this.client!, this.propertyId, params.metric);
+    
+    return {
+      content: [{
+        type: 'text',
+        text: JSON.stringify(result, null, 2),
       }],
     };
   }

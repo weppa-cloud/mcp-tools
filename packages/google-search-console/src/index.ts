@@ -5,6 +5,7 @@ import {
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 import { z } from 'zod';
+import { zodToJsonSchema } from 'zod-to-json-schema';
 import { createSearchConsoleClient, GoogleSearchConsoleConfig } from './auth.js';
 import { google } from 'googleapis';
 import {
@@ -66,38 +67,38 @@ class GoogleSearchConsoleMCPServer {
         {
           name: 'seo_pulse',
           description: '🚀 Health check instantáneo del SEO con alertas y quick wins',
-          inputSchema: SeoPulseSchema,
+          inputSchema: zodToJsonSchema(SeoPulseSchema),
         },
         {
           name: 'keyword_opportunities',
           description: '💰 Encuentra keywords fáciles de mejorar para ganar tráfico rápido',
-          inputSchema: KeywordOpportunitiesSchema,
+          inputSchema: zodToJsonSchema(KeywordOpportunitiesSchema),
         },
         {
           name: 'content_gaps',
           description: '📝 Descubre qué contenido crear para capturar más búsquedas',
-          inputSchema: ContentGapsSchema,
+          inputSchema: zodToJsonSchema(ContentGapsSchema),
         },
         // Herramientas de Análisis
         {
           name: 'page_performance',
           description: '📊 Analiza el rendimiento de páginas específicas en búsquedas',
-          inputSchema: PagePerformanceSchema,
+          inputSchema: zodToJsonSchema(PagePerformanceSchema),
         },
         {
           name: 'search_trends',
           description: '📈 Detecta tendencias y estacionalidad en las búsquedas',
-          inputSchema: SearchTrendsSchema,
+          inputSchema: zodToJsonSchema(SearchTrendsSchema),
         },
         {
           name: 'technical_seo_audit',
           description: '🔧 Auditoría técnica: Core Web Vitals, mobile, indexación',
-          inputSchema: TechnicalAuditSchema,
+          inputSchema: zodToJsonSchema(TechnicalAuditSchema),
         },
         {
           name: 'competitor_analysis',
           description: '🎯 Compara tu SEO con competidores y encuentra oportunidades',
-          inputSchema: CompetitorAnalysisSchema,
+          inputSchema: zodToJsonSchema(CompetitorAnalysisSchema),
         },
       ],
     }));

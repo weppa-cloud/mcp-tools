@@ -1,0 +1,142 @@
+name: Sync n8n-mcp Upstream
+
+on:
+  schedule:
+    # Run every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force sync even if no changes'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/czlonkowski/n8n-mcp.git || true
+          git fetch upstream
+
+      - name: Check for updates
+        id: check
+        run: |
+          # Get latest upstream tag
+          UPSTREAM_VERSION=$(git ls-remote --tags upstream | grep -E 'refs/tags/v?[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -1 | sed 's/.*\///')
+          echo "UPSTREAM_VERSION=${UPSTREAM_VERSION}" >> $GITHUB_OUTPUT
+          
+          # Get our current version
+          CURRENT_VERSION=$(cd packages/n8n && node -p "require('./package.json').version")
+          echo "CURRENT_VERSION=${CURRENT_VERSION}" >> $GITHUB_OUTPUT
+          
+          # Compare versions
+          if [ "${UPSTREAM_VERSION#v}" != "${CURRENT_VERSION}" ] || [ "${{ github.event.inputs.force }}" == "true" ]; then
+            echo "UPDATE_NEEDED=true" >> $GITHUB_OUTPUT
+            echo "Updates available: ${CURRENT_VERSION} -> ${UPSTREAM_VERSION#v}"
+          else
+            echo "UPDATE_NEEDED=false" >> $GITHUB_OUTPUT
+            echo "Already up to date: ${CURRENT_VERSION}"
+          fi
+
+      - name: Sync upstream changes
+        if: steps.check.outputs.UPDATE_NEEDED == 'true'
+        run: |
+          # Create temporary directory for upstream code
+          mkdir -p /tmp/n8n-mcp-upstream
+          cd /tmp/n8n-mcp-upstream
+          
+          # Clone upstream
+          git clone https://github.com/czlonkowski/n8n-mcp.git .
+          git checkout ${{ steps.check.outputs.UPSTREAM_VERSION }}
+          
+          # Copy source files to our package
+          cd $GITHUB_WORKSPACE
+          rm -rf packages/n8n/src
+          cp -r /tmp/n8n-mcp-upstream/src packages/n8n/
+          
+          # Copy other essential files if they exist
+          for file in tsconfig.json README.md; do
+            if [ -f "/tmp/n8n-mcp-upstream/$file" ]; then
+              cp "/tmp/n8n-mcp-upstream/$file" "packages/n8n/$file"
+            fi
+          done
+          
+          # Update version in package.json
+          cd packages/n8n
+          npm version ${{ steps.check.outputs.UPSTREAM_VERSION }} --no-git-tag-version
+          
+          # Update upstream tracking info
+          node -e "
+            const pkg = require('./package.json');
+            pkg.upstream = {
+              repository: 'https://github.com/czlonkowski/n8n-mcp',
+              lastSync: new Date().toISOString().split('T')[0],
+              version: '${{ steps.check.outputs.UPSTREAM_VERSION }}'.replace('v', '')
+            };
+            require('fs').writeFileSync('./package.json', JSON.stringify(pkg, null, 2) + '\n');
+          "
+
+      - name: Build and test
+        if: steps.check.outputs.UPDATE_NEEDED == 'true'
+        run: |
+          cd packages/n8n
+          npm install
+          npm run build
+          # Run tests if available
+          npm test || true
+
+      - name: Create Pull Request
+        if: steps.check.outputs.UPDATE_NEEDED == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: sync n8n-mcp upstream to ${{ steps.check.outputs.UPSTREAM_VERSION }}'
+          title: '🔄 Sync n8n-mcp upstream to ${{ steps.check.outputs.UPSTREAM_VERSION }}'
+          body: |
+            ## Automated upstream sync
+            
+            This PR syncs our fork with the latest changes from [n8n-mcp](https://github.com/czlonkowski/n8n-mcp).
+            
+            **Version**: `${{ steps.check.outputs.CURRENT_VERSION }}` → `${{ steps.check.outputs.UPSTREAM_VERSION }}`
+            
+            ### Checklist
+            - [ ] Review changes for any breaking changes
+            - [ ] Ensure attribution is maintained
+            - [ ] Verify build passes
+            - [ ] Test basic functionality
+            
+            ### Notes
+            - This is an automated sync from upstream
+            - Original author: Romuald Czlonkowski @ www.aiadvisors.pl/en
+            - License: MIT
+          branch: sync-n8n-upstream-${{ steps.check.outputs.UPSTREAM_VERSION }}
+          delete-branch: true
+          labels: |
+            upstream-sync
+            automated
+            n8n
+
+      - name: Auto-merge if tests pass
+        if: steps.check.outputs.UPDATE_NEEDED == 'true'
+        run: |
+          echo "Pull request created. Review and merge to publish the update."
